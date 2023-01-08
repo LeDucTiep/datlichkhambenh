@@ -9,10 +9,9 @@ module.exports = (Sequelize, DataTypes) => {
   }
   Allcode.init(
     {
-      key: DataTypes.STRING,
-      type: DataTypes.STRING,
-      valueEn: DataTypes.STRING,
-      valueVi: DataTypes.STRING,
+      address: DataTypes.STRING,
+      description: DataTypes.TEXT,
+      image: DataTypes.STRING,
     },
     {
       sequelize,

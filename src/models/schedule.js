@@ -2,22 +2,23 @@
 
 const { Model, Sequelize, DataTypes } = require("sequelize");
 module.exports = (Sequelize, DataTypes) => {
-  class Allcode extends Model {
+  class Schedule extends Model {
     static associate(models) {
       // define associate here
     }
   }
-  Allcode.init(
+  Schedule.init(
     {
-      key: DataTypes.STRING,
-      type: DataTypes.STRING,
-      valueEn: DataTypes.STRING,
-      valueVi: DataTypes.STRING,
+      currentNumber: DataTypes.INTEGER,
+      maxNumber: DataTypes.INTEGER,
+      date: DataTypes.DATE,
+      timeType: DataTypes.STRING,
+      doctorId: DataTypes.INTEGER,
     },
     {
       sequelize,
-      modelName: "Allcode",
+      modelName: "Schedule",
     }
   );
-  return Allcode;
+  return Schedule;
 };

@@ -4,27 +4,21 @@ const { QueryInterface, Sequelize } = require("sequelize");
 
 module.exports = {
   up: async (QueryInterface, Sequelize) => {
-    await QueryInterface.createTable("Users", {
+    await QueryInterface.createTable("doctor_clinic_specialty", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      email: {
-        type: Sequelize.STRING,
+      doctorId: {
+        type: Sequelize.INTEGER,
       },
-      firstName: {
-        type: Sequelize.STRING,
+      clinicId: {
+        type: Sequelize.INTEGER,
       },
-      lastName: {
-        type: Sequelize.STRING,
-      },
-      address: {
-        type: Sequelize.STRING,
-      },
-      roleid: {
-        type: Sequelize.STRING,
+      specialtyId: {
+        type: Sequelize.INTEGER,
       },
       createdAt: {
         allowNull: false,
@@ -37,6 +31,6 @@ module.exports = {
     });
   },
   down: async (QueryInterface, Sequelize) => {
-    await QueryInterface.dropTable("Users");
+    await QueryInterface.dropTable("doctor_clinic_specialty");
   },
 };

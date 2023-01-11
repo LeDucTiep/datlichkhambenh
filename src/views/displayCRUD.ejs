@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display crud</title>
+</head>
+
+<body>
+  get crud from view
+  <table width="1000px" border="1">
+    <tr>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Firstname</th>
+      <th>Lastname</th>
+    </tr>
+    <% for (let i=0; i < dataTable.length; i++ ) { %>
+    <tr>
+      <td>
+        <%= dataTable[i].email %>
+      </td>
+      <td>
+        <%= dataTable[i].password %>
+      </td>
+      <td>
+        <%= dataTable[i].firstName %>
+      </td>
+      <td>
+        <%= dataTable[i].lastName %>
+      </td>
+    </tr>
+
+    <% } %>
+
+  </table>
+</body>
+
+</html>
